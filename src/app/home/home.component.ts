@@ -1,19 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-// import { bubbleAnimation } from '../animations/bubble.animation';
-import { homeTransition } from '../animations/home.animation';
+import { listAnimation } from '../animations/list.animation';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [ homeTransition ],
-  host: { '[@homeTransition]': '' }
+  animations: [ listAnimation ]
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  items = [];
+
+  constructor() {
+    this.items = ['item one', 'item two', 'item three'];
+  }
 
   ngOnInit() {
+  }
+
+  pushItem() {
+    this.items.push('Adding new item to items');
+  }
+
+  removeItem() {
+    this.items.pop();
   }
 
 }

@@ -1,6 +1,32 @@
 <h1>Home</h1>
-<div class="header">
+<!-- <div class="header">
   <div class="block">&nbsp;</div>
   <div class="block">&nbsp;</div>
   <div class="block">&nbsp;</div>
+</div> -->
+
+<!-- <div class="card__container" [@listAnimation]="items.length">
+  <div class="card__content">
+
+    <ul>
+      <li class="card__list" *ngFor="let item of items">
+        {{ item }}
+      </li>
+    </ul>
+
+      <div class="card__list" *ngFor="let item of items">
+        {{ item }}
+      </div>
+  </div>
+</div> -->
+
+<button (click)="pushItem()">Add Item</button>
+<button (click)="removeItem()" class="close"></button>
+
+<div [@listAnimation]="items.length">
+  <ul class="list">
+    <li class="list__item" *ngFor="let item of items">
+      <a class="list__detail">{{ item }}</a>
+    </li>
+  </ul>
 </div>
