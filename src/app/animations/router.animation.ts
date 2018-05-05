@@ -1,8 +1,6 @@
 import { trigger, animate, style, group, query, transition, keyframes } from '@angular/animations';
 // import {trigger, stagger, animate, style, group, query as q, transition, keyframes} from '@angular/animations';
 
-import { sequence } from '@angular/core';
-import { animateChild } from '@angular/animations/src/animation_metadata';
 
 export function routerTransition() {
   return slideToLeft();
